@@ -4,3 +4,8 @@
     margin: 0;
 }
 
+.navbar-brand {
+    font-size: 30px;
+    color: rgb(53, 164, 232);
+    font-family: 'Times New Roman', Times, serif;
+}
