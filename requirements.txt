@@ -1,8 +1,11 @@
 asgiref==3.9.1
 black==25.1.0
 click==8.2.1
+crispy-bootstrap5==2025.6
 dj-database-url==3.0.1
 Django==5.2.4
+django-allauth==65.10.0
+django-crispy-forms==2.4
 gunicorn==23.0.0
 mypy_extensions==1.1.0
 packaging==25.0
