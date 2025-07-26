@@ -39,6 +39,14 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = "/"     
 LOGOUT_REDIRECT_URL = "/" 
 
+ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.CustomSignupForm'
+
+ACCOUNT_FORMS = {
+    'signup': 'accounts.forms.CustomSignupForm',
+}
+
+
+ACCOUNT_SIGNUP_FORM_CLASS = "accounts.forms.CustomSignupForm"
 ACCOUNT_LOGIN_METHODS = {'username', 'email'}
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = "none"
