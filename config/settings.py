@@ -5,12 +5,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-tfr7o)fg(c$@zu=tdt_1t2s(4!yzh54=z)vtp4s!v5a)k^^es$"
+# SECRET_KEY = "django-insecure-tfr7o)fg(c$@zu=tdt_1t2s(4!yzh54=z)vtp4s!v5a)k^^es$"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
