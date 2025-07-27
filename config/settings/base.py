@@ -16,13 +16,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "home",
-    "accounts",
     "django.contrib.sites",  
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "crispy_forms",
     "crispy_bootstrap5",
+    "accounts.apps.AccountsConfig",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -36,17 +36,14 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+LOGIN_URL = "/"
 LOGIN_REDIRECT_URL = "/"     
 LOGOUT_REDIRECT_URL = "/" 
-
-ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.CustomSignupForm'
 
 ACCOUNT_FORMS = {
     'signup': 'accounts.forms.CustomSignupForm',
 }
 
-
-ACCOUNT_SIGNUP_FORM_CLASS = "accounts.forms.CustomSignupForm"
 ACCOUNT_LOGIN_METHODS = {'username', 'email'}
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = "none"
